@@ -84,18 +84,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     <div style={outsideStyles}>
       <div style={containerStyles}>
         <div style={fillerStyles}>
-          {labelAlignment !== "outside" && (
-            <span style={labelStyles}>
-              {typeof completed === "number" ? `${completed}%` : `${completed}`}
-            </span>
-          )}
         </div>
       </div>
-      {labelAlignment === "outside" && (
-        <span style={labelStyles}>
-          {typeof completed === "number" ? `${completed}%` : `${completed}`}
-        </span>
-      )}
     </div>
   );
 };
@@ -117,7 +107,7 @@ ProgressBar.propTypes = {
 
 ProgressBar.defaultProps = {
   bgcolor: "#6a1b9a",
-  height: "20px",
+  height: "5px",
   width: "100%",
   borderRadius: "50px",
   labelAlignment: "right",
